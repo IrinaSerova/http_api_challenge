@@ -1,0 +1,65 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<!--Array of objects-->
+<h2>WHITE PAGES</h2>
+<table style="width:100%">
+  <tr>
+    <th>Address</th>
+    <th>Location Type</th> 
+    <th>City</th>
+  </tr>
+  <tr>
+    <td *ngIf="current_addresses">
+  <p *ngFor="let address of current_addresses">
+  {{ address.id}}
+  
+</p>
+</td>
+       <td *ngIf="current_addresses">
+  <p *ngFor="let address of current_addresses">
+  
+  {{address.location_type }}
+  
+  
+</p>
+</td>
+     <td *ngIf="current_addresses">
+  <p *ngFor="let address of current_addresses">
+  
+ 
+  {{address.city }}
+  
+</p>
+</td>
+ 
+</table>
+<div *ngIf="current_addresses">
+  <p *ngFor="let address of current_addresses">
+  {{ address.id}}
+  {{address.location_type }}
+  {{address.city }}
+  
+</p>
+</div>
+
+<div *ngIf="historical_addresses">
+  <p *ngFor="let address of historical_addresses">
+  {{ address.id}}
+  
+</p>
+</div>
+<div *ngIf="associated_people">
+  <p *ngFor="let person of associated_people">
+  {{ person.id}}
+   {{ person.name}}
+  
+</p>
+</div>
+<!--Array-->
+<div *ngIf="alternate_phones">
+  <p *ngFor="let phone of alternate_phones">
+  {{ phone }}
+   
+  
+</p>
+</div>
+
